@@ -60,11 +60,92 @@ export default function MyApp() {
 ```
 ## Writing markup with JSX
 
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:
+JSX is stricter than HTML. You have to close tags like &lt;br /&gt;. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper:
+
+```
+function AboutPage() {
+    return (
+        <>
+            <h1>About</h1>
+            <p>Hello there. <br />How do you do?</p>
+        </>
+    )
+}
+```
+
+Then you write the CSS rules for it in a separate CSS file:
+
+```
+.avatar {
+  border-radius: 50%;
+}
+```
+
+React does not prescribe how you add CSS files. In the simplest case, you’ll add a <link> tag to your HTML. 
 
 ## Adding styles
+
+In React, you specify a CSS class with className. It works the same way as the HTML class attribute:
+
+```
+<img className="avatar" />
+```
+
 ## Displaying data
+
+JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:
+
+```
+return (
+  <h1>
+    {user.name}
+  </h1>
+);
+```
+
+You can also “escape into JavaScript” from JSX attributes, but you have to use curly braces _instead_ of quotes. 
+
+```
+return (
+  <img className="avatar" src={user.imageUrl} />
+);
+```
+
+You can put more complex expressions inside the JSX curly braces too, for example, string concatenation:
+
+```
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
+
+export default function Profile() {
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
+}
+
+```
+
+In the above example, style={{}} is not a special syntax, but a regular {} object inside the style={ } JSX curly braces. You can use the style attribute when your styles depend on JavaScript variables.
+
 ## Conditional rendering
+
+
+
+
 ## Rendering lists
 ## Responding to events
 ## Updating the screen
