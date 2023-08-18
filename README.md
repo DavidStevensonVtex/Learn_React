@@ -331,4 +331,19 @@ Hooks are more restrictive than other functions. You can only call Hooks at the 
 
 
 ## Sharing data between components
+
+In the previous example, each MyButton had its own independent count, and when each button was clicked, only the count for the button clicked changed:
+
+![Alt text](001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child.webp) ![Alt text](001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child_clicked.webp) 
+
+However, often you’ll need components to share data and always update together.
+
+To make both MyButton components display the same count and update together, you need to move the state from the individual buttons “upwards” to the closest component containing all of them.
+
+In this example, it is MyApp:
+
+<img src="001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child.webp" alt="Sharing data child" width="400px"/> <img src="001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child_clicked.webp" alt="Sharing data child" width="400px"/> 
+
+![Alt text](001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child.webp) ![Alt text](001_QuickStart/i_SharingDataBetweenComponents/sharing_data_child_clicked.webp)
+
 ## Next Steps
