@@ -425,3 +425,7 @@ export default function MyApp() {
 }
 ```
 ## Next Steps
+
+By now, you know the basics of how to write React code!
+
+Check out the [Tutorial](https://react.dev/learn/tutorial-tic-tac-toe) to put them into practice and build your first mini-app with React.
