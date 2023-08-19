@@ -864,6 +864,8 @@ export default function Board() {
 
 ## Completing the game
 
+By this point, you have all the basic building blocks for your tic-tac-toe game. To have a complete game, you now need to alternate placing “X”s and “O”s on the board, and you need a way to determine a winner.
+
 ### LIfting state up
 ### Why immutability is important
 ### Taking turns
