@@ -803,11 +803,21 @@ function Square() {
 }
 ```
 
-By calling this set function from an onClick handler, you’re telling React to re-render that Square whenever its <button> is clicked. After the update, the Square’s value will be 'X', so you’ll see the “X” on the game board. Click on any Square, and “X” should show up:
+By calling this set function from an onClick handler, you’re telling React to re-render that Square whenever its &lt;button&gt; is clicked. After the update, the Square’s value will be 'X', so you’ll see the “X” on the game board. Click on any Square, and “X” should show up:
 
 Each Square has its own state: the value stored in each Square is completely independent of the others. When you call a set function in a component, React automatically updates the child components inside too.
 
 After you’ve made the above changes, your code will look like this:
+
+
+
+### React Developer Tools
+
+React DevTools let you check the props and the state of your React components. You can find the React DevTools tab at the bottom of the browser section in CodeSandbox:
+
+Note
+
+For local development, React DevTools is available as a Chrome, Firefox, and Edge browser extension. Install it, and the Components tab will appear in your browser Developer Tools for sites using React.
 
 ```
 import { useState } from 'react';
@@ -850,11 +860,7 @@ export default function Board() {
     </>
   );
 }
-
 ```
-
-
-### React Developer Tools
 
 ## Completing the game
 
