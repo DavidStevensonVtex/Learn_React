@@ -1468,6 +1468,25 @@ function calculateWinner(squares) {
 As a final exercise, let’s make it possible to “go back in time” to the previous moves in the game.
 
 ### Storing a history of moves
+
+If you mutated the squares array, implementing time travel would be very difficult.
+
+However, you used slice() to create a new copy of the squares array after every move, and treated it as immutable. This will allow you to store every past version of the squares array, and navigate between the turns that have already happened.
+
+You’ll store the past squares arrays in another array called history, which you’ll store as a new state variable. The history array represents all board states, from the first to the last move, and has a shape like this:
+
+```
+[
+  // Before first move
+  [null, null, null, null, null, null, null, null, null],
+  // After first move
+  [null, null, null, null, 'X', null, null, null, null],
+  // After second move
+  [null, null, null, null, 'X', null, null, null, 'O'],
+  // ...
+]
+```
+
 ### Living state up, again
 ### Showing the past moves
 ### Picking a key
