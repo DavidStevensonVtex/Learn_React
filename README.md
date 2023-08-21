@@ -1465,6 +1465,8 @@ function calculateWinner(squares) {
 
 ## Adding time travel
 
+As a final exercise, let’s make it possible to “go back in time” to the previous moves in the game.
+
 ### Storing a history of moves
 ### Living state up, again
 ### Showing the past moves
