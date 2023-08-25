@@ -2415,7 +2415,43 @@ If you have extra time or want to practice your new React skills, here are some 
 
 ### Start with the mockup 
 
+fruits_and_vegatables.js
+
+```
+[
+    { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+    { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+    { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+    { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+    { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+    { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+  ]
+```
+
 ### Step 1: Break the UI into a component hierarchy
+
+Depending on your background, you can think about splitting up a design into components in different ways:
+
+* Programming. [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) - a component should ideally do only one thing.
+* CSS - class selectors
+* Design
+
+There are five components on this screen:
+
+<img src='003_ThinkingInReact/s_thinking-in-react_ui_outline.png' width='30%'>
+
+
+1. FilterableProductTable (grey) contains the entire app.
+1. SearchBar (blue) receives the user input.
+1. ProductTable (lavender) displays and filters the list according to the user input.
+1. ProductCategoryRow (green) displays a heading for each category.
+1. ProductRow (yellow) displays a row for each product.
+
+* FilterableProductTable
+  * SearchBar
+  * ProductTable
+    * ProductCategoryRow
+    * ProductRow
 
 ### Step 2: Build a staic version in React
 
