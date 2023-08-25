@@ -2551,9 +2551,40 @@ export default function App() {
 
 After building your components, you’ll have a library of reusable components that render your data model. Because this is a static app, the components will only return JSX. The component at the top of the hierarchy (FilterableProductTable) will take your data model as a prop. This is called one-way data flow because the data flows down from the top-level component to the ones at the bottom of the tree.
 
-
-
 ### Step 3: Find the minimal but complete representation of UI state
+
+To make the UI interactive, you need to let users change your underlying data model. You will use state for this.
+
+Think of state as the minimal set of changing data that your app needs to remember. The most important principle for structuring state is to keep it DRY (Don’t Repeat Yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else on-demand. 
+
+Now think of all of the pieces of data in this example application:
+
+1. The original list of products
+1. The search text the user has entered
+1. The value of the checkbox
+1. The filtered list of products
+
+Which of these are state? Identify the ones that are not:
+
+* Does it remain unchanged over time? If so, it isn’t state.
+* Is it passed in from a parent via props? If so, it isn’t state.
+* Can you compute it based on existing state or props in your component? If so, it definitely isn’t state!
+
+Let’s go through them one by one again:
+
+1. The original list of products is passed in as props, so it’s not state.
+1. The search text seems to be state since it changes over time and can’t be computed from anything.
+1. The value of the checkbox seems to be state since it changes over time and can’t be computed from anything.
+1. The filtered list of products isn’t state because it can be computed by taking the original list of products and filtering it according to the search text and value of the checkbox.
+1. This means only the search text and the value of the checkbox are state! Nicely done!
+
+DEEP DIVE
+Props vs State 
+
+There are two types of “model” data in React: props and state. The two are very different:
+
+* Props are like arguments you pass to a function. They let a parent component pass data to a child component and customize its appearance. For example, a Form can pass a color prop to a Button.
+* State is like a component’s memory. It lets a component keep track of some information and change it in response to interactions. For example, a Button might keep track of isHovered state.
 
 ### Step 4: Identify where your state should live
 
