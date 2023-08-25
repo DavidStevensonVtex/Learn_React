@@ -3056,3 +3056,5 @@ export default function App() {
 You can learn all about handling events and updating state in the [Adding Interactivity](https://react.dev/learn/adding-interactivity) section.
 
 ### Where to go from here
+
+This was a very brief introduction to how to think about building components and applications with React. You can [start a React project](https://react.dev/learn/installation) right now or [dive deeper on all the syntax](https://react.dev/learn/describing-the-ui) used in this tutorial.
