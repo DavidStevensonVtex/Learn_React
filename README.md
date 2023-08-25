@@ -2410,3 +2410,19 @@ If you have extra time or want to practice your new React skills, here are some 
 1. When someone wins, highlight the three squares that caused the win (and when no one wins, display a message about the result being a draw).
 1. Display the location for each move in the format (row, col) in the move history list.
 1. Throughout this tutorial, you’ve touched on React concepts including elements, components, props, and state. Now that you’ve seen how these concepts work when building a game, check out Thinking in React to see how the same React concepts work when build an app’s UI.
+
+## [Thinking in React](https://react.dev/learn/thinking-in-react)
+
+### Start with the mockup 
+
+### Step 1: Break the UI into a component hierarchy
+
+### Step 2: Build a staic version in React
+
+### Step 3: Find the minimal but complete representation of UI state
+
+### Step 4: Identify where your state should live
+
+### Step 5: Add inverse data flow
+
+### Where to go from here
